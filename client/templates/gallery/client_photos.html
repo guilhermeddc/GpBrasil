@@ -1,0 +1,14 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% for p in photos %}
+        <img src="{{ p.photo.url }}" width="p.photo.width" height="p.photo.height" alt="No image"/>
+    {% endfor %}
+</head>
+<body>
+
+</body>
+</html>

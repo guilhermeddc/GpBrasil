@@ -1,0 +1,214 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    {{ block.super }} - {{ object.name }}
+{% endblock %}
+
+{% block container %}
+
+    <header class="masthead text-center text-white d-flex"
+            style="background-image: url('{{ object.profile_picture.url }}');">
+        <div class="container my-auto">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h1 class="text-uppercase"><strong>
+                        {{ object.name }} {{ object.last_name }}
+                    </strong>
+                    </h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="col-lg-8 mx-auto">
+                <p class="text-faded mb-5"><strong>{{ object.name }}</strong>&nbsp; - {{ object.description }}<br>
+                </p><a class="btn btn-primary btn-xl js-scroll-trigger" role="button"
+                       href="#model-details">Mais detalhes!!!</a></div>
+        </div>
+    </header>
+    <section id="anuncie" class="bg-dark text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Meus Videos</h2>
+            <!-- 16:9 aspect ratio -->
+
+
+            {% for vid in video %}
+
+                <div class="embed-responsive embed-responsive-16by9">
+
+                    <iframe class="embed-responsive-item col-auto"
+                            src="{{ vid.video.url }}"></iframe>
+
+                </div>
+
+            {% endfor %}
+
+
+        </div>
+    </section>
+    <section id="model-details">
+        <i class="icon ion-android-microphone"></i>
+        <div class="container">
+            <div class="text-center col-auto">
+                <br><h4>Descrição</h4>
+                <p>{{ object.description }}</p>
+                <br>
+                <h4>Tipos de Serviços</h4><br>
+
+                {% for serv in services %}
+
+                    {{ serv }} -
+
+                {% endfor %}
+
+                <br>
+
+
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-12 col-xl-3 offset-xl-0 col-md-5">
+                    <div class="profile-block">
+                        <h4>Perfil</h4>
+                        <ul>
+                            <li><span class="font-400">Nome:</span><span class="profile-right">{{ object.name }}</span>
+                            </li>
+                            <li><span class="font-400">Sobrenome:</span><span
+                                    class="profile-right">{{ object.last_name }}</span></li>
+                            <li><span class="font-400">Idade:</span><span class="profile-right">{{ object.age }}</span>
+                            </li>
+                            <li><span class="font-400">Etnia:</span><span
+                                    class="profile-right">{{ object.ethnicity }}</span></li>
+                            <li><span class="font-400">Cachê/hr:</span><span
+                                    class="profile-right">{{ object.cacheForHours }}</span></li>
+                            <li><span class="font-400">Gênero: </span><span
+                                    class="profile-right">{{ object.genre }}</span></li>
+                            <li><span class="font-400">Peso: </span><span
+                                    class="profile-right">{{ object.weight }}</span></li>
+                            <li><span class="font-400">Olhos: </span><span class="profile-right">{{ object.eye }}</span>
+                            </li>
+                            <li><span class="font-400">Altura: </span><span
+                                    class="profile-right">{{ object.height }}</span></li>
+                            <li><span class="font-400">Busto: </span><span
+                                    class="profile-right">{{ object.bust }}</span></li>
+                            <li><span class="font-400">Cintura: </span><span
+                                    class="profile-right">{{ object.waist }}</span></li>
+                            <li><span class="font-400">Bunda: </span><span
+                                    class="profile-right">{{ object.butt }}</span></li>
+                        </ul>
+
+                        <h4>Tipos de Atendimento</h4>
+                        <ul>
+
+                            {% for serv in customerService %}
+
+                                <li><span class="font-400">{{ serv }}:</span><span class="profile-right">SIM</span></li>
+
+                            {% endfor %}
+
+                        </ul>
+                        <h4>Locais Aceitos</h4>
+                        <ul>
+
+                            {% for place in places %}
+
+                                <li><span class="font-400">{{ place }}</span></li>
+
+                            {% endfor %}
+
+                        </ul>
+                        <h4>Tipos de Pagamentos</h4>
+                        <ul>
+
+                            {% for pay in payments %}
+
+                                <li><span class="font-400">{{ pay.payment }}</span></li>
+
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-7 col-xl-9 offset-md-0 offset-xl-0 col-md-5">
+                    <section id="galeria" class="p-0">
+                        <div class="container-fluid p-0">
+                            <div class="row no-gutters popup-gallery">
+
+                                {% for p in photos %}
+
+                                    <div class="col-sm-6 col-lg-4 col-xl-6">
+                                        <a class="portfolio-box" href="{{ p.photo.url }}">
+                                            <img class="img-fluid" src="{{ p.photo.url }}"/>
+                                            <div class="portfolio-box-caption">
+                                                <div class="portfolio-box-caption-content">
+                                                    <div class="project-category text-faded"><span>{{ p.title }}</span>
+                                                    </div>
+                                                    <div class="project-name"><span>{{ p.description }}</span></div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+    {#    <section id="model-details">#}
+    {#        <i class="icon ion-android-microphone"></i>#}
+    {#        <div class="container">#}
+    {#            <div class="row">#}
+    {#                <div class="col-lg-7 col-xl-7 col-md-4">#}
+    {#                    <ul id="imageGallery">#}
+    {##}
+    {#                        {% for photo in photos %}#}
+    {##}
+    {#                            <li data-thumb="{{ photo.photo.url }}" data-src="{{ photo.photo.url }}">#}
+    {#                                <img class="img-fluid" src="{{ photo.photo.url }}"/>#}
+    {#                            </li>#}
+    {##}
+    {#                        {% endfor %}#}
+    {##}
+    {#                    </ul>#}
+    {#                </div>#}
+    {#                <div class="col-12 col-xl-5 offset-xl-0 col-md-5">#}
+    {#                    <div class="profile-block">#}
+    {#                        <h3>Perfil</h3>#}
+    {#                        <ul>#}
+    {#                            <li>#}
+    {#                                <span class="font-400">Nome: </span>#}
+    {#                                <span class="profile-right">{{ object.name }}</span>#}
+    {#                            </li>#}
+    {#                            <li>#}
+    {#                                <span class="font-400">Idade: </span>#}
+    {#                                <span class="profile-right">{{ object.age }}</span>#}
+    {#                            </li>#}
+    {#                            <li>#}
+    {#                                <span class="font-400">Etnia: </span>#}
+    {#                                <span class="profile-right">{{ object.ethnicity }}</span>#}
+    {#                            </li>#}
+    {#                            <li>#}
+    {#                                <span class="font-400">Cachê/hr: </span>#}
+    {#                                <span class="profile-right">{{ object.cacheForHours }}</span>#}
+    {#                            </li>#}
+    {#                            <li>#}
+    {#                                <span class="font-400">Gênero: </span>#}
+    {#                                <span class="profile-right">{{ object.genre }}</span>#}
+    {#                            </li>#}
+    {#                        </ul>#}
+    {#                    </div>#}
+    {#                    <h3 class="profile-block-title font-alt">Sobre</h3>#}
+    {#                    <div class="bio-container">#}
+    {#                        <p> {{ object.description }} </p>#}
+    {#                    </div>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </section>#}
+
+{% endblock %}

@@ -1,0 +1,239 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    {{ block.super }} - Melhores garotas de programa da capital
+{% endblock %}
+
+{% block container %}
+    <header class="masthead text-center text-white d-flex"
+            style="background-image: url('{% static 'assets/img/Mulheres-Fashion-26.jpg' %}');">
+        <div class="container my-auto">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h1 class="text-uppercase"><strong><img src="{% static 'assets/img/GP_3nav2.png' %}"/></strong></h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="col-lg-8 mx-auto">
+                <p class="text-faded mb-5"><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                    1500s.<br>
+                </p><a class="btn btn-primary btn-xl js-scroll-trigger" role="button"
+                       href="{% url 'index' %}#galeria">18 anos?</a></div>
+        </div>
+    </header>
+
+    <section id="galeria" class="p-0">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <a class="portfolio-box" href="{% url 'index' %}loiras">
+                        <img class="img-fluid" src="{% static 'assets/img/loiras.jpg' %}">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+{#                                {% if object.ethnicity == 'loiras' %}#}
+                                <div class="project-category text-faded"><span>{{ object.ethnicity }}Loiras</span></div>
+                                <div class="project-name"><span>{{ object.first_name }}</span></div>
+{#                                {% endif %}#}
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <a class="portfolio-box" href="{% url 'index' %}morenas">
+                        <img class="img-fluid" src="{% static 'assets/img/morenas.jpg' %}">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded"><span>Morenas</span></div>
+                                <div class="project-name"><span>Kellen</span></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <a class="portfolio-box" href="{% url 'index' %}mulatas">
+                        <img class="img-fluid" src="{% static 'assets/img/16.jpg' %}">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded"><span>Mulatas</span></div>
+                                <div class="project-name"><span>Juditi</span></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <a class="portfolio-box" href="{% url 'index' %}asiaticas">
+                        <img class="img-fluid" src="{% static 'assets/img/18.jpg' %}" alt="s">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded"><span>Asiaticas</span></div>
+                                <div class="project-name"><span>Roberta</span></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <a class="portfolio-box" href="{% url 'index' %}ruivas">
+                        <img class="img-fluid" src="{% static 'assets/img/ruiva.jpg' %}">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded"><span>Ruivas</span></div>
+                                <div class="project-name"><span>Aninha</span></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <a class="portfolio-box" href="{% url 'index' %}negras">
+                        <img class="img-fluid" src="{% static 'assets/img/negra.jpg' %}">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded"><span>Negras</span></div>
+                                <div class="project-name"><span>Maria</span></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <a class="portfolio-box" href="{% url 'index' %}plussize">
+                        <img class="img-fluid" src="{% static 'assets/img/17.jpg' %}">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded"><span>Plus size</span></div>
+                                <div class="project-name"><span>Sandrinha</span></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4 col-xl-3">
+                    <a class="portfolio-box" href="{% url 'gallery' %}">
+                        <img class="img-fluid" src="{% static 'assets/img/todas.jpg' %}">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded"><span>todas</span></div>
+                                <div class="project-name"><span>E Muito Mais...</span></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col offset-lg-8 mx-auto text-center">
+                    <h2 class="text-white section-heading">Gostou do que viu?<br></h2>
+                    <hr class="light my-4">
+                    <p class="text-faded mb-4"><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing
+                        and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                        1500s.<br>
+                    </p>
+                    <a class="btn btn-light btn-xl js-scroll-trigger" role="button" href="">Conheça as garotas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="termos">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Termos de Privacidade</h2>
+                    <hr class="my-4">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 text-center">
+                    <div class="mx-auto service-box mt-5"><i class="fa fa-eye-slash fa-4x text-primary mb-3 sr-icons"
+                                                             data-aos="zoom-in" data-aos-duration="200"
+                                                             data-aos-once="true"></i>
+                        <h3 class="mb-3" style="font-family: Montserrat, sans-serif;">Conteúdo Adulto</h3>
+                        <p class="text-muted mb-0"><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the
+                            printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                            ever since the 1500s.<br></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center">
+                    <div class="mx-auto service-box mt-5"><i class="fa fa-eye fa-4x text-primary mb-3 sr-icons"
+                                                             data-aos="zoom-in" data-aos-duration="200"
+                                                             data-aos-delay="200" data-aos-once="true"></i>
+                        <h3 class="mb-3" style="font-family: Montserrat, sans-serif;">18 Anos ou Mais</h3>
+                        <p class="text-muted mb-0"><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the
+                            printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                            ever since the 1500s.<br></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center">
+                    <div class="mx-auto service-box mt-5"><i class="fa fa-remove fa-4x text-primary mb-3 sr-icons"
+                                                             data-aos="zoom-in" data-aos-duration="200"
+                                                             data-aos-delay="400" data-aos-once="true"></i>
+                        <h3 class="mb-3" style="font-family: Montserrat, sans-serif;">Não</h3>
+                        <p class="text-muted mb-0"><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the
+                            printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                            ever since the 1500s.<br></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 text-center">
+                    <div class="mx-auto service-box mt-5"><i class="fa fa-check fa-4x text-primary mb-3 sr-icons"
+                                                             data-aos="fade" data-aos-duration="200"
+                                                             data-aos-delay="600" data-aos-once="true"></i>
+                        <h3 class="mb-3" style="font-family: Montserrat, sans-serif;">Sim</h3>
+                        <p class="text-muted mb-0"><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the
+                            printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                            ever since the 1500s.<br></p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col link-termos">
+                        <a href="#">Termos de Privacidade</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="anuncie" class="bg-dark text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Anuncie Conosco</h2><a class="btn btn-light btn-xl sr-button" role="button"
+                                                    data-aos="zoom-in" data-aos-duration="400" data-aos-once="true"
+                                                    href="#">Veja nossas vantagens</a></div>
+    </section>
+    <section id="contato">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-heading">Entre em Contato</h2>
+                    <hr class="my-4">
+                    <p class="mb-5"><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                        1500s.<br></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 ml-auto text-center"><i class="fa fa-whatsapp fa-3x mb-3 sr-contact"
+                                                             data-aos="zoom-in" data-aos-duration="300"
+                                                             data-aos-once="true"></i>
+                    <p>123-456-6789</p>
+                </div>
+                <div class="col-lg-4 ml-auto text-center"><i class="fa fa-phone fa-3x mb-3 sr-contact"
+                                                             data-aos="zoom-in" data-aos-duration="300"
+                                                             data-aos-once="true"></i>
+                    <p>123-456-6789</p>
+                </div>
+                <div class="col-lg-4 mr-auto text-center"><i class="fa fa-envelope-o fa-3x mb-3 sr-contact"
+                                                             data-aos="zoom-in" data-aos-duration="300"
+                                                             data-aos-delay="300" data-aos-once="true"></i>
+                    <p><a href="mailto:your-email@your-domain.com">email@example.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
