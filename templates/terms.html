@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    {{ block.super }} - Melhores garotas de programa da capital
+{% endblock %}
+{% block container %}
+    <header class="masthead text-center text-white d-flex"
+            style="background-image: url('{% static 'assets/img/Mulheres-Fashion-26.jpg' %}');font-size: 12px">
+        <div class="container my-auto">
+            <div class="row">
+                <div class="col-lg-10 mx-auto text-left">
+                    <h2>POLÍTICA DE ANÚNCIOS</h2>
+                    <p>Visando preservar a qualidade do conteúdo oferecido aos visitantes do site, adotamos algumas
+                        diretrizes em relação aos anúncios fornecido pelas anunciantes, a saber:</p>
+                    <h5>A) DO VETO</h5>
+                    <p>Não será publicado anúncios que contenham:</p>
+                    <ol>
+                        <li>Fotos com roupas e/ou acessórios com cores que explicitem a bandeira pátria;</li>
+                        <li>Fotos com roupas e/ou acessórios com cores que explicitem culturas nacionais,
+                            indígenas ou Forças Armadas;</li>
+                        <li>Fotos com roupas e/ou acessórios religiosos;</li>
+                        <li>Fotos ambientadas em locais postais, militares, políticos e sagrados
+                            (incluindo templos religiosos e cemitérios);</li>
+                        <li>Fotos com a presença de animais serão previamente analisadas. Favor evitar;</li>
+                        <li>Fotos com temas infantis bem como presença de brinquedos e bonecos de pelúcia.
+                            Neste caso, sugerimos inserir um link para o blog pessoal do anunciante,
+                            neste caso sendo o mesmo o único responsável pelas fotos divulgadas em seu blog.</li>
+                        <li>Fotos com clientes não serão publicadas;</li>
+                        <li>Fotos contendo sexo não serão publicadas;</li>
+                        <li>Ensaio com mais de 50% das fotos caseiras ou sem resolução adequada.</li>
+                    </ol>
+                    <h5>B) DA QUANTIDADE DE FOTOS</h5>
+                    <ol>
+                        <li>O máximo de fotos permitidas no site são de 20 fotos.</li>
+                        <li>Acima de 20 fotos o valor do anúncio será diferenciado.</li>
+                    </ol>
+                    <h5>C) DA PERIODICIDADE</h5>
+                    <ol>
+                        <li>Anúncios femininos - planos mensal ou quinzenal.</li>
+                        <li>Anuncio travestis - preço diferenciado, planos quinzenais ou semanais somente após
+                            os 30 primeiros dias anunciado.</li>
+                        <li>Anuncio masculino - preço diferenciado, apenas plano mensal.</li>
+                    </ol>
+                    <p>-> Consulte os valores e periodicidades diretamente por email ou por telefone.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    {% include 'component/advertise.html' %}
+    {% include 'component/contact.html' %}
+{% endblock %}

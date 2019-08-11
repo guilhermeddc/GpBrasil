@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from client.models import *
+from gp.models import *
 from django.views.generic import DetailView, ListView
 
 

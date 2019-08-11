@@ -1,0 +1,114 @@
+{% load static %}
+
+<section id="galeria" class="p-0">
+    <div class="container-fluid p-0">
+        <div class="row no-gutters">
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+                <a class="portfolio-box" href="{% url 'index' %}loiras">
+                    <img class="img-fluid" src="{% static 'assets/img/loiras.jpg' %}">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            {#                                {% if object.ethnicity == 'loiras' %}#}
+                            <div class="project-category text-faded"><span>{{ object.ethnicity }}Loiras</span></div>
+                            <div class="project-name"><span>{{ object.first_name }}</span></div>
+                            {#                                {% endif %}#}
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+                <a class="portfolio-box" href="{% url 'index' %}morenas">
+                    <img class="img-fluid" src="{% static 'assets/img/morenas.jpg' %}">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded"><span>Morenas</span></div>
+                            <div class="project-name"><span>Kellen</span></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+                <a class="portfolio-box" href="{% url 'index' %}mulatas">
+                    <img class="img-fluid" src="{% static 'assets/img/16.jpg' %}">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded"><span>Mulatas</span></div>
+                            <div class="project-name"><span>Juditi</span></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+                <a class="portfolio-box" href="{% url 'index' %}asiaticas">
+                    <img class="img-fluid" src="{% static 'assets/img/18.jpg' %}" alt="s">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded"><span>Asiaticas</span></div>
+                            <div class="project-name"><span>Roberta</span></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+                <a class="portfolio-box" href="{% url 'index' %}ruivas">
+                    <img class="img-fluid" src="{% static 'assets/img/ruiva.jpg' %}">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded"><span>Ruivas</span></div>
+                            <div class="project-name"><span>Aninha</span></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+                <a class="portfolio-box" href="{% url 'index' %}negras">
+                    <img class="img-fluid" src="{% static 'assets/img/negra.jpg' %}">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded"><span>Negras</span></div>
+                            <div class="project-name"><span>Maria</span></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+                <a class="portfolio-box" href="{% url 'index' %}plussize">
+                    <img class="img-fluid" src="{% static 'assets/img/17.jpg' %}">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded"><span>Plus size</span></div>
+                            <div class="project-name"><span>Sandrinha</span></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+                <a class="portfolio-box" href="#">
+                    <img class="img-fluid" src="{% static 'assets/img/todas.jpg' %}">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded"><span>todas</span></div>
+                            <div class="project-name"><span>E Muito Mais...</span></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="bg-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col offset-lg-8 mx-auto text-center">
+                <h2 class="text-white section-heading">Gostou do que viu?<br></h2>
+                <hr class="light my-4">
+                <p class="text-faded mb-4"><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing
+                    and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                    1500s.<br>
+                </p>
+                <a class="btn btn-light btn-xl js-scroll-trigger" role="button" href="">Conheça as garotas</a>
+            </div>
+        </div>
+    </div>
+</section>

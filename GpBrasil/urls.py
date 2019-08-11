@@ -16,21 +16,19 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
-from core.views import IndexListView, index_list_view
-from client.views import CategoryDetailView, category_detail_view,\
-    ClientDetailView, client_detail_view, ClientListView, client_list_view
+from GpBrasil.views import terms_page, contact_page, login_page, register_page
+from core import urls as core_urls
+from gp import urls as gp_urls
 
 urlpatterns = [
-    path('', IndexListView.as_view(), name='index'),
-    path('', index_list_view),
-    path('gal/', ClientListView.as_view(), name='gallery'),
-    path('gal-fbv/', client_list_view),
-    path('garota/<int:pk>/', ClientDetailView.as_view(), name='girl'),
-    path('garota-fbv/<int:pk>/', client_detail_view),
-    path('gpc/<str:slug>/', CategoryDetailView.as_view(), name='category'),
-    path('gpc/<str:slug>/', category_detail_view),
+    path('', include(core_urls)),
+    path('termos/', terms_page, name='terms'),
+    path('contato/', contact_page, name='contact'),
+    path('entrar/', login_page, name='login'),
+    path('registrar/', register_page, name='register'),
+    path('garotas/', include(gp_urls)),
     path('admin/', admin.site.urls),
 ]
 
