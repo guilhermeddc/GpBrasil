@@ -2,6 +2,7 @@ from random import randint
 import os
 from django.db import models
 from django.db.models.signals import pre_save, post_save
+from django.urls import reverse
 
 from .utils.utils import unique_slug_generator
 
@@ -227,7 +228,8 @@ class Client(models.Model):
         ordering = ['-modified']
 
     def get_absolute_url(self):
-        return f"/garotas/{self.slug}/"
+        # return f"/garotas/{self.slug}/"
+        return reverse('clients:detail', kwargs={'slug': self.slug})
 
     def __str__(self):
         return self.first_name + ' ' + self.last_name

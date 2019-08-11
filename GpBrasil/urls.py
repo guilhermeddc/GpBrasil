@@ -23,12 +23,12 @@ from core import urls as core_urls
 from gp import urls as gp_urls
 
 urlpatterns = [
-    path('', include(core_urls)),
+    path('', include(core_urls), name='index'),
     path('termos/', terms_page, name='terms'),
     path('contato/', contact_page, name='contact'),
     path('entrar/', login_page, name='login'),
     path('registrar/', register_page, name='register'),
-    path('garotas/', include(gp_urls)),
+    path('acompanhantes/', include(gp_urls), name='clients'),
     path('admin/', admin.site.urls),
 ]
 
